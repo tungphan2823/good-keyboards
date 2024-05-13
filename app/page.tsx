@@ -5,7 +5,11 @@ import SouthIcon from "@mui/icons-material/South";
 import NavBar from "@/components/navBar";
 import AutoScrolling from "@/components/autoScroll";
 import kb81 from "../public/keyboard/kb81.jpg";
-export default function Home() {
+import { getKeyboards } from "@/lib/keyboards";
+
+export default async function Home() {
+  const keyboards = await getKeyboards();
+
   return (
     <main>
       {" "}
@@ -43,54 +47,25 @@ export default function Home() {
           Top recommended keyboards
         </h1>
         <div className="grid grid-cols-4 gap-4">
-          <div className="p-8 w-96 ">
-            <div>
-              <Image className="rounded-3xl  " src={kb81} alt=""></Image>
-              <h1 className="text-black p-4 ">
-                Keyboard 81 Pro QMK/VIA Wireless Custom Mechanical Keyboard
-              </h1>
+          {keyboards.map((keyboard, index) => (
+            <div className="p-8 w-96 object-cover " key={index}>
+              <div className="">
+                {/* Adjust this part based on your Image component */}
+                <div className=" relative h-80 ">
+                  {" "}
+                  <Image
+                    fill
+                    className="rounded-3xl "
+                    src={keyboard.image}
+                    alt={keyboard.title}
+                  />
+                </div>
+
+                {/* Display keyboard title */}
+                <h1 className="text-black p-4">{keyboard.title}</h1>
+              </div>
             </div>
-          </div>
-          <div className="p-8 w-96 ">
-            <div>
-              <Image className="rounded-3xl  " src={kb81} alt=""></Image>
-              <h1 className="text-black p-4 ">
-                Keyboard 81 Pro QMK/VIA Wireless Custom Mechanical Keyboard
-              </h1>
-            </div>
-          </div>
-          <div className="p-8 w-96 ">
-            <div>
-              <Image className="rounded-3xl  " src={kb81} alt=""></Image>
-              <h1 className="text-black p-4 ">
-                Keyboard 81 Pro QMK/VIA Wireless Custom Mechanical Keyboard
-              </h1>
-            </div>
-          </div>
-          <div className="p-8 w-96 ">
-            <div>
-              <Image className="rounded-3xl  " src={kb81} alt=""></Image>
-              <h1 className="text-black p-4 ">
-                Keyboard 81 Pro QMK/VIA Wireless Custom Mechanical Keyboard
-              </h1>
-            </div>
-          </div>
-          <div className="p-8 w-96 ">
-            <div>
-              <Image className="rounded-3xl  " src={kb81} alt=""></Image>
-              <h1 className="text-black p-4 ">
-                Keyboard 81 Pro QMK/VIA Wireless Custom Mechanical Keyboard
-              </h1>
-            </div>
-          </div>
-          <div className="p-8 w-96 ">
-            <div>
-              <Image className="rounded-3xl  " src={kb81} alt=""></Image>
-              <h1 className="text-black p-4 ">
-                Keyboard 81 Pro QMK/VIA Wireless Custom Mechanical Keyboard
-              </h1>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </main>
