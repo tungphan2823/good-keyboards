@@ -5,6 +5,7 @@ const dummyKb = [
   {
     title: "NuPhy Air75 V2",
     slug: "nuphy-air75-v2",
+    price: 119.95,
     image: [
       "/nuphy/air75/main.jpg",
       "/nuphy/air75/1.jpg",
@@ -43,6 +44,7 @@ const dummyKb = [
   {
     title: "NuPhy Air96 V2",
     slug: "nuphy-air96-v2",
+    price: 129.95,
     image: [
       "/nuphy/air96/main.jpg",
       "/nuphy/air96/1.jpg",
@@ -81,6 +83,7 @@ const dummyKb = [
   {
     title: "NuPhy Gem80",
     slug: "nuphy-gem-80",
+    price: 149.95,
     image: [
       "/nuphy/gem80/main.jpg",
       "/nuphy/gem80/1.jpg",
@@ -122,6 +125,7 @@ Type Angle 6º
   {
     title: "CIDOO V68 VIA",
     slug: "cidoo-v68-via",
+    price: 129.99,
     image: [
       "/epo/v68/main.jpg",
       "/epo/v68/1.jpg",
@@ -170,6 +174,7 @@ Instruction Manual
   {
     title: "KiiBOOM Phantom 64",
     slug: "kiiboom-phantom-64",
+    price: 199.00,
     image: [
       "/epo/phantom64/main.jpg",
       "/epo/phantom64/1.jpg",
@@ -231,37 +236,7 @@ Instruction Manual
   {
     title: "NuType F1 AW20 Late Summer Night Ver.",
     slug: "nutype-f1-aw20-late-night-ver",
-    image: [
-      "/nuphy/f1/main.jpg",
-      "/nuphy/f1/1.jpg",
-      "/nuphy/f1/2.jpg",
-      "/nuphy/f1/3.jpeg",
-      "/nuphy/f1/4.jpeg",
-      "/nuphy/f1/5.jpeg",
-    ],
-    summary: "Wireless Mechanical Keyboard",
-    specs: `
-    Switch Type: Kaihua Choc Low Profile Mechanical Switch
-Number of Keys: ANSI 64-key, ISO 65-key, JIS 66-key
-LED Type: Per Key RGB LEDs
-Backlit Types: 20+
-Mode: Wired Mode, Bluetooth Mode
-Battery: 1800mAh
-Connection Type: USB Type-C
-System: MacOS/Windows/Android/iOS
-5.0° slope
-    `,
-    brand: "NuPhy",
-    dimensions: `
-    277.5 x 94.6 x 16.8 mm / 10.9 x 3.72 x 0.66 in
-350g / 12.3 oz
-    `,
-    material: `
-    Frame: Aluminum
-Keycap: PC`,
-  },{
-    title: "NuType F1 AW20 Late Summer Night Ver.",
-    slug: "nutype-f1-aw20-late-night-ver",
+    price: 119.95,
     image: [
       "/nuphy/f1/main.jpg",
       "/nuphy/f1/1.jpg",
@@ -295,17 +270,19 @@ Keycap: PC`,
 
 db.prepare(
   `
-   CREATE TABLE IF NOT EXISTS keyboards (
-       id INTEGER PRIMARY KEY AUTOINCREMENT,
-       slug TEXT NOT NULL UNIQUE,
-       title TEXT NOT NULL,
-       image TEXT NOT NULL,
-       summary TEXT NOT NULL,
-       specs TEXT NOT NULL,
-       brand TEXT NOT NULL,
-       dimensions TEXT NOT NULL,
-       material TEXT NOT NULL
-    )
+  CREATE TABLE IF NOT EXISTS keyboards (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    slug TEXT NOT NULL UNIQUE,
+    title TEXT NOT NULL,
+    image TEXT NOT NULL,
+    price INTEGER NOT NULL,
+    summary TEXT NOT NULL,
+    specs TEXT NOT NULL,
+    brand TEXT NOT NULL,
+    dimensions TEXT NOT NULL,
+    material TEXT NOT NULL
+)
+
 `
 ).run();
 
@@ -316,6 +293,7 @@ async function initData() {
          @slug,
          @title,
          @image,
+         @price,
          @summary,
          @specs,
          @brand,

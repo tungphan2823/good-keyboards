@@ -3,6 +3,7 @@ interface Keyboard {
   id: number;
   title: string;
   slug: string;
+  price: number;
   image: string;
   summary: string;
   specs: string;
