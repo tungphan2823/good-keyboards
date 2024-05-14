@@ -5,15 +5,12 @@ import SouthIcon from "@mui/icons-material/South";
 import NavBar from "@/components/navBar";
 import AutoScrolling from "@/components/autoScroll";
 import kb81 from "../public/keyboard/kb81.jpg";
-import { getKeyboards } from "@/lib/keyboards";
-
-export default async function Home() {
-  const keyboards = await getKeyboards();
-
+import { KeyboardItems } from "@/components/keyboardItems";
+export default function Home() {
   return (
     <main>
       {" "}
-      <NavBar />
+      {/* <NavBar /> */}
       <div
         className="flex flex-1  gap-4 border-b-2 border-black
 
@@ -46,27 +43,7 @@ export default async function Home() {
         <h1 className="font-Freeman text-2xl text-black">
           Top recommended keyboards
         </h1>
-        <div className="grid grid-cols-4 gap-4">
-          {keyboards.map((keyboard, index) => (
-            <div className="p-8 w-96 object-cover " key={index}>
-              <div className="">
-                {/* Adjust this part based on your Image component */}
-                <div className=" relative h-80 ">
-                  {" "}
-                  <Image
-                    fill
-                    className="rounded-3xl "
-                    src={keyboard.image}
-                    alt={keyboard.title}
-                  />
-                </div>
-
-                {/* Display keyboard title */}
-                <h1 className="text-black p-4">{keyboard.title}</h1>
-              </div>
-            </div>
-          ))}
-        </div>
+        <KeyboardItems />
       </div>
     </main>
   );
