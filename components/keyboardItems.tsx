@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 export async function KeyboardItems() {
   const keyboards = await getKeyboards();
-  console.log(keyboards);
+  
 
   return (
     <div className="md:grid md:grid-cols-4 md:gap-4 overflow-x-scroll  md:overflow-x-hidden flex border-b-2 border-gray-50">
-      {keyboards.map((keyboard, index) => (
+      {keyboards.slice(0, 8).map((keyboard, index) => (
         <div className="p-8   object-cover flex-initial " key={index}>
           <Link href={`/keyboards/${keyboard.slug}`}>
             <div className="">

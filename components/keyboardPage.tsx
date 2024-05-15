@@ -2,9 +2,11 @@
 import Image from "next/image";
 import { gsap } from "gsap";
 import Link from "next/link";
-
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import React, { useRef, useState } from "react";
 gsap.registerPlugin(ScrollTrigger);
 type keyboardType = {
@@ -23,7 +25,7 @@ type keyboardType = {
 export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
   const textRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
-
+  const [currentIndex, setCurrentIndex] = useState(0);
   useGSAP(() => {
     const textElement = textRef.current;
     const imageElement = imageRef.current;
@@ -40,23 +42,51 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
       });
     }
   });
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide
+      ? JSON.parse(keyboard.image).length - 1
+      : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === JSON.parse(keyboard.image).length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
   return (
     <div className="p-8 ">
       <div className="object-cover h-full flex-1 flex justify-center pb-20 border-b-2 border-gray">
         <div className="md:flex md:gap-12">
           <div
             ref={imageRef}
-            className=" relative md:h-[800px] md:w-[800px] h-96 w-96"
+            className=" relative md:h-[800px] md:w-[800px] h-96 w-96 text-black flex justify-center items-center"
           >
-            {" "}
+            <div onClick={prevSlide}>
+              <ArrowBackIosIcon className="absolute z-10 top-1/2 left-3 cursor-pointer text-stone-800 text-4xl" />{" "}
+            </div>
+
             <Image
               fill
-              className="rounded-3xl "
-              src={JSON.parse(keyboard.image)[0]}
+              className="rounded-3xl duration-500"
+              src={JSON.parse(keyboard.image)[currentIndex]}
               alt={keyboard.title}
             />
+            <div onClick={nextSlide}>
+              <ArrowForwardIosIcon className="absolute z-10 top-1/2 right-3 cursor-pointer text-stone-800 text-4xl" />
+            </div>
+
+            <div className=" absolute text-stone-800 flex bottom-5  ">
+              {JSON.parse(keyboard.image).map(
+                (slide: string, slideIndex: number) => (
+                  <div>
+                    <FiberManualRecordIcon className="text-sm md:text-2xl" />
+                  </div>
+                )
+              )}
+            </div>
           </div>
-          <div ref={textRef} className=" text-black  leading-loose	w-96	">
+          <div ref={textRef} className=" text-black  leading-loose	w-96 left	">
             <h1>{keyboard.brand}</h1>
             <h1 className="text-4xl font-bold">{keyboard.title}</h1>
             <h1 className="">{keyboard.summary}</h1>
@@ -67,7 +97,7 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
                 <Link href={keyboard.link}>Buy now </Link>
               </button>
             </div>
-           
+
             <div>
               {" "}
               <h1 className="font-bold text-xl pt-8">
