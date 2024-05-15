@@ -3,6 +3,7 @@ import keyboard from "../public/keyboard/testkeyboard.jpg";
 import keyboard1 from "../public/keyboard/switch.gif";
 import SouthIcon from "@mui/icons-material/South";
 import NavBar from "@/components/navBar";
+import Link from "next/link";
 import AutoScrolling from "@/components/autoScroll";
 import kb81 from "../public/keyboard/kb81.jpg";
 import { KeyboardItems } from "@/components/keyboardItems";
@@ -53,25 +54,34 @@ export default function Home() {
           <div className="text-black font-Freeman md:grid md:grid-cols-4 ">
             <div className="p-4">
               <div className="flex md:w-96 md:h-64 w-64 h-32 justify-center items-center p-8 gap-4 cursor-pointer bg-imageWhite rounded-2xl hover:border-2 hover:border-black transition-all">
-                <Image src={nuphy} alt="nuphy" />
+                <Link href="/keyboards?filter=NuPhy">
+                  <Image src={nuphy} alt="nuphy" />
+                </Link>
               </div>
             </div>
             <div className="p-4">
               {" "}
               <div className="flex md:w-96 md:h-64 w-64 h-32 justify-center items-center p-8 gap-4 cursor-pointer bg-imageWhite rounded-2xl hover:border-2 hover:border-black transition-all">
-                <Image src={epo} alt="epo" />
+                <Link href="/keyboards?filter=Epomaker">
+                  <Image src={epo} alt="epo" />
+                </Link>
               </div>
             </div>
             <div className="p-4">
               {" "}
               <div className="flex md:w-96 md:h-64 w-64 h-32 justify-center items-center p-8 gap-4 cursor-pointer bg-imageWhite rounded-2xl hover:border-2 hover:border-black transition-all">
-                <Image src={akko} alt="akko" />
+                <Link href="/keyboards?filter=akko">
+                  <Image src={akko} alt="akko" />
+                </Link>
               </div>
             </div>
             <div className="p-4">
               {" "}
               <div className="flex md:w-96 md:h-64 w-64 h-32 justify-center items-center p-8 gap-4 cursor-pointer bg-imageWhite rounded-2xl hover:border-2 hover:border-black transition-all">
-                <Image src={keychron} alt="keychron" />
+                <Link href="/keyboards?filter=keychron">
+                  {" "}
+                  <Image src={keychron} alt="keychron" />
+                </Link>
               </div>
             </div>
           </div>

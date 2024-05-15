@@ -28,7 +28,7 @@ export default function NavBar() {
             </span>
           </div>
           <div className="relative flex justify-center h-full cursor-pointer items-center p-4 font font-Cairo text-white hover:bg-zinc-800">
-            <span>Keyboards</span>
+            <span><Link href="/keyboards">Keyboards</Link></span>
           </div>
           <div className="relative flex justify-center h-full cursor-pointer items-center p-4 font font-Cairo text-white hover:bg-zinc-800">
             <span>Accessories</span>
