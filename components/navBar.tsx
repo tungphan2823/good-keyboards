@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-
+import Link from "next/link";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +23,7 @@ export default function NavBar() {
         </div>
         <div className="absolute top-[100px] bg-zinc-900 w-full left-0 peer-open:block hidden">
           <div className="relative flex justify-center h-full cursor-pointer items-center p-4 font font-Cairo text-white hover:bg-zinc-800">
-            <span>Home</span>
+            <span><Link href="/">Home</Link></span>
           </div>
           <div className="relative flex justify-center h-full cursor-pointer items-center p-4 font font-Cairo text-white hover:bg-zinc-800">
             <span>Keyboards</span>
@@ -37,7 +37,9 @@ export default function NavBar() {
         </div>
       </div>
       <div className="md:flex hidden gap-8 text-xl cursor-pointer">
-        <div>Home</div>
+        <div>
+          <Link href="/">Home</Link>
+        </div>
         <div>Keyboards</div>
         <div>Accessories</div>
         <div>About</div>

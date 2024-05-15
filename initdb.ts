@@ -6,13 +6,12 @@ const dummyKb = [
     title: "NuPhy Air75 V2",
     slug: "nuphy-air75-v2",
     price: 119.95,
+    link: "https://nuphy.com/products/air75-v2",
     image: [
       "/nuphy/air75/main.jpg",
       "/nuphy/air75/1.jpg",
       "/nuphy/air75/2.jpg",
       "/nuphy/air75/3.png",
-      "/nuphy/air75/4.jpeg",
-      "/nuphy/air75/5.jpeg",
     ],
     summary: "QMK/VIA Wireless Mechanical Keyboard    ",
     specs: `
@@ -45,13 +44,12 @@ const dummyKb = [
     title: "NuPhy Air96 V2",
     slug: "nuphy-air96-v2",
     price: 129.95,
+    link: "https://nuphy.com/products/air96-v2",
     image: [
       "/nuphy/air96/main.jpg",
       "/nuphy/air96/1.jpg",
       "/nuphy/air96/2.jpg",
       "/nuphy/air96/3.jpg",
-      "/nuphy/air96/4.jpeg",
-      "/nuphy/air96/5.jpeg",
     ],
     summary: "QMK/VIA Wireless Mechanical Keyboard",
     specs: `
@@ -84,6 +82,7 @@ const dummyKb = [
     title: "NuPhy Gem80",
     slug: "nuphy-gem-80",
     price: 149.95,
+    link: "https://nuphy.com/products/gem80",
     image: [
       "/nuphy/gem80/main.jpg",
       "/nuphy/gem80/1.jpg",
@@ -126,6 +125,7 @@ Type Angle 6º
     title: "CIDOO V68 VIA",
     slug: "cidoo-v68-via",
     price: 129.99,
+    link: "https://epomaker.com/products/cidoo-v68-via",
     image: [
       "/epo/v68/main.jpg",
       "/epo/v68/1.jpg",
@@ -174,7 +174,8 @@ Instruction Manual
   {
     title: "KiiBOOM Phantom 64",
     slug: "kiiboom-phantom-64",
-    price: 199.00,
+    price: 199.0,
+    link: "https://epomaker.de/products/kiiboom-phantom-64",
     image: [
       "/epo/phantom64/main.jpg",
       "/epo/phantom64/1.jpg",
@@ -237,13 +238,13 @@ Instruction Manual
     title: "NuType F1 AW20 Late Summer Night Ver.",
     slug: "nutype-f1-aw20-late-night-ver",
     price: 119.95,
+    link: "https://nuphy.com/products/nutype-f1-aw20-late-summer-night-ver",
     image: [
       "/nuphy/f1/main.jpg",
       "/nuphy/f1/1.jpg",
       "/nuphy/f1/2.jpg",
       "/nuphy/f1/3.jpeg",
       "/nuphy/f1/4.jpeg",
-      "/nuphy/f1/5.jpeg",
     ],
     summary: "Wireless Mechanical Keyboard",
     specs: `
@@ -266,6 +267,236 @@ System: MacOS/Windows/Android/iOS
     Frame: Aluminum
 Keycap: PC`,
   },
+  {
+    title: "Keychron V1 QMK Custom Mechanical Keyboard ISO Layout Collection",
+    slug: "keychron-v1-qmk",
+    price: 79.0,
+    link: "https://www.keychron.com/products/keychron-v1-qmk-custom-mechanical-keyboard-iso-layout-collection",
+    image: [
+      "/keychron/main.jpg",
+      "/keychron/1.jpg",
+      "/keychron/2.jpg",
+      "/keychron/3.jpg",
+      "/keychron/4.jpg",
+    ],
+    summary: "Fully Assembled Knob (Frosted Black)-ABS Keycaps",
+    specs: `
+    Keycaps	OSA Profile ABS backlight shine-through keycaps / OSA Profile PBT non-shine-through keycaps
+    MCU	Ultra-low-power ARM Cortex-M4 32-bit STM32L432 (128KB Flash)
+    Switches	Keychron K Pro 
+    Backlight	South-facing RGB LED
+    Switch Support	Hot-swappable (5 pin & 3 pin)
+    Stabs	Screw-in PCB stabs
+    Connectivity	Type-C
+    Cable	Type-C cable + Type-A to Type-C adapter
+    Operating Environment	-10℃ to 50℃
+    `,
+    brand: "keychron",
+    dimensions: `
+    Width	148.7 mm
+Length	328.5 mm
+Front Height	17.9 mm  (without keycaps)
+Back Height	25.8 mm (without keycaps)
+Feet Height	2.4 mm
+Angle	3.5° / 7.08° / 9.52°
+Weight	970 g ± 10 g (Fully Assembled Version)
+Body Material	ABS Plastic
+Plate Material	Steel
+Polling Rate	1000 Hz
+Mount Style	Tray Mount Design
+    `,
+    material: `
+    Body Material	ABS Plastic
+    Plate Material	Steel
+`,
+  },
+  {
+    title: "Keychron K3 Max QMK/VIA Wireless Custom Mechanical Keyboard",
+    slug: "keychron-k3-max",
+    price: 94.0,
+    link: "https://www.keychron.com/products/keychron-k3-max-qmk-via-wireless-custom-mechanical-keyboard",
+    image: [
+      "/keychron2/main.jpg",
+      "/keychron2/1.jpg",
+      "/keychron2/2.jpg",
+      "/keychron2/3.jpg",
+      "/keychron2/4.jpg",
+    ],
+    summary: "Ultra-slim wireless custom mechanical keyboard",
+    specs: `
+    Number of Keys: 84 (75%)
+    Switches: Gateron low-profile mechanical
+    Switch Face: North-facing
+    Number of Multimedia Keys: 12 
+    Frame Material: ABS+Aluminum frame
+    Keycap Material: Low-profile double-shot PBT
+    Layout: ANSI
+    Polling Rate (2.4Ghz and Wired Mode): 1000Hz
+    Polling Rate (BT Mode): 90Hz
+    N-Key Rollover (NKRO): Yes for both wireless and wired modes
+    
+    *The K3 Max is currently compatible with Gateron/Keychron low-profile mechanical switches only, as QMK does NOT support low-profile optical switches.
+    `,
+    brand: "keychron",
+    dimensions: `
+    Dimension: 306 x 116 mm (12.04 x 4.56")
+Weight: 525 g / 1.16 lbs
+Height without keycap (front): 11 mm (0.43")
+Height without keycap (rear): 15 mm (0.59")
+Height incl. keycap (front): 17 mm (0.66")
+Height incl. keycap (rear): 22 mm (0.86")
+Typing Angle: 2.5º, 4.2º and 6.5º
+MCU: ARM Cortex-M4 32-bit STM32F402 (256KB Flash)
+Operating Environment: -10 to 50℃
+    `,
+    material: `
+    Frame Material: ABS+Aluminum frame
+Keycap Material: Low-profile double-shot
+`,
+  },
+  {
+    title: "Keychron V8 (Alice Layout) QMK Custom Mechanical Keyboard",
+    slug: "keychron-v8",
+    price: 99.0,
+    link: "https://www.keychron.com/products/keychron-v8-alice-layout-qmk-custom-mechanical-keyboard",
+    image: [
+      "/keychron3/main.jpg",
+      "/keychron3/1.jpg",
+      "/keychron3/2.jpg",
+      "/keychron3/3.jpg",
+    ],
+    summary: "Fully Assembled Knob",
+    specs: `
+    Keycaps (Fully Assembled Version)	Double-shot PBT keycaps, not shine-through, OSA Profile (OEM height, SA shape)
+MCU	Ultra-low-power ARM Cortex-M4 32-bit STM32L432 (128KB Flash)
+Switches	Keychron K Pro (Fully Assembled Version)
+Backlight	South-facing RGB LED
+Switch Support	Hot-swappable (5 pin & 3 pin)
+Stabs	Screw-in PCB stabs
+Connectivity	Type-C
+Cable	Type-C cable + Type-A to Type-C adapter
+Operating Environment	-10℃ to 50℃
+    `,
+    brand: "keychron",
+    dimensions: `
+    Width	138 mm
+Length	359.55 mm
+Front Height	18.73 mm  (without keycaps)
+Back Height	26 mm (without keycaps)
+Feet Height	3 mm
+Angle	3.5° / 7.99° / 11°
+Weight	 945 ± 10 g (Fully Assembled Version)
+Body Material	ABS Plastic
+Plate Material	Steel
+Polling Rate	1000 Hz
+Mount Style	Tray Mount Design
+    `,
+    material: `
+    Body Material	ABS Plastic
+Plate Material	Steel
+`,
+  },
+  {
+    title: "MOD007v3 HE Year of Dragon",
+    slug: "mod007v3",
+    price: 179.99,
+    link: "https://en.akkogear.com/product/mod007v3-he-dragon-mechanical-keyboard/",
+    image: [
+      "/akko/007/main.jpg",
+      "/akko/007/1.jpg",
+      "/akko/007/2.jpg",
+      "/akko/007/3.jpg",
+      "/akko/007/4.png",
+      "/akko/007/5.png",
+    ],
+    summary: "The Limited Edition Akko Year of Dragon Keyboard ",
+    specs: `
+    Switch	Akko Cream Yellow Magnetic Switch
+    Interface	USB Type C
+    Macro	Supported
+    N-Key Rollover	Supported
+    Disable Winlock	Supported
+    Backlit	RGB backlit
+    Hot-Swappable	N/A
+    `,
+    brand: "akko",
+    dimensions: `
+    333*146*33mm
+    Approximately 1.9KG
+
+    `,
+    material: `
+    PBT Material
+
+`,
+  },
+  {
+    title: "Horizon 5075B Plus SP",
+    slug: "horizon-5075b",
+    price: 89.99,
+    link: "https://en.akkogear.com/product/horizon-5075b-plus-sp-mechanical-keyboard/",
+    image: [
+      "/akko/horizon/main.jpg",
+      "/akko/horizon/1.jpg",
+      "/akko/horizon/2.jpg",
+      "/akko/horizon/3.jpg",
+    ],
+    summary: "Akko V3 Cream Yellow Pro",
+    specs: `
+    Switch	Akko V3 Cream Blue Pro/kko V3 Cream Yellow Pro
+Interface	Wireless/Bluetooth/USB Type C
+Macro	Akko Macro V1.0
+N-Key Rollover	Supported
+Disable Winlock	Supported
+Backlit	RGB Backlit
+Hot-Swappable	Yes
+    `,
+    brand: "akko",
+    dimensions: `
+    335*146*42mm
+
+    Approximately 0.88KG
+
+    `,
+    material: `
+    PBT Material
+
+`,
+  },
+  {
+    title: "MU01 Mountain Seclusion",
+    slug: "mu01",
+    price: 119.99,
+    link: "https://en.akkogear.com/product/mu01-mountain-seclusion-mechanical-keyboard/",
+    image: [
+      "/akko/MU01/main.jpg",
+      "/akko/MU01/1.jpg",
+      "/akko/MU01/2.jpg",
+      "/akko/MU01/3.jpg",
+    ],
+    summary: "Walnut Wooden Case, 68-key Gasket Structure Keyboard",
+    specs: `
+    Switch	Akko V3 Piano Pro
+    Interface	Wireless/Bluetooth/USB Type C
+    Macro	Akko Macro V1.0
+    N-Key Rollover	Supported
+    Disable Winlock	Supported
+    Backlit	RGB backlit
+    Hot-Swappable	Yes
+    `,
+    brand: "akko",
+    dimensions: `
+    327*125.3*46.7mm
+
+    Approximately 0.85KG
+
+
+    `,
+    material: `
+    PBT Material
+
+`,
+  },
 ];
 
 db.prepare(
@@ -275,6 +506,7 @@ db.prepare(
     slug TEXT NOT NULL UNIQUE,
     title TEXT NOT NULL,
     image TEXT NOT NULL,
+    link TEXT NOT NULL,
     price INTEGER NOT NULL,
     summary TEXT NOT NULL,
     specs TEXT NOT NULL,
@@ -293,6 +525,7 @@ async function initData() {
          @slug,
          @title,
          @image,
+         @link,
          @price,
          @summary,
          @specs,

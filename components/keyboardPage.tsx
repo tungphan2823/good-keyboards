@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { gsap } from "gsap";
+import Link from "next/link";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -11,6 +12,7 @@ type keyboardType = {
   title: string;
   slug: string;
   price: number;
+  link: string;
   image: string;
   summary: string;
   specs: string;
@@ -41,8 +43,11 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
   return (
     <div className="p-8 ">
       <div className="object-cover h-full flex-1 flex justify-center pb-20 border-b-2 border-gray">
-        <div className="flex gap-12">
-          <div ref={imageRef} className=" relative h-[800px] w-[800px]">
+        <div className="md:flex md:gap-12">
+          <div
+            ref={imageRef}
+            className=" relative md:h-[800px] md:w-[800px] h-96 w-96"
+          >
             {" "}
             <Image
               fill
@@ -51,7 +56,7 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
               alt={keyboard.title}
             />
           </div>
-          <div ref={textRef} className=" text-black  leading-loose		">
+          <div ref={textRef} className=" text-black  leading-loose	w-96	">
             <h1>{keyboard.brand}</h1>
             <h1 className="text-4xl font-bold">{keyboard.title}</h1>
             <h1 className="">{keyboard.summary}</h1>
@@ -59,9 +64,10 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
             <div className="pt-4">
               {" "}
               <button className="p-2 bg-lime-600 hover:bg-lime-500 rounded-xl w-32">
-                Buy now{" "}
+                <Link href={keyboard.link}>Buy now </Link>
               </button>
             </div>
+           
             <div>
               {" "}
               <h1 className="font-bold text-xl pt-8">
@@ -92,9 +98,9 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
         </div>
       </div>
       <div>
-        <div className="p-8">
-          <div className="flex justify-center">
-            <div className=" relative h-[800px] w-[800px] ">
+        <div className="md:p-8 ">
+          <div className="md:flex justify-center">
+            <div className=" relative md:h-[800px] md:w-[800px] h-96 w-96">
               {" "}
               <Image
                 fill
@@ -103,43 +109,57 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
                 alt={keyboard.title}
               />
             </div>
-            <div className=" relative h-[800px] w-[800px] ">
+            <div className=" relative md:h-[800px] md:w-[800px] h-96 w-96 ">
               {" "}
-              <Image
-                fill
-                className=" "
-                src={JSON.parse(keyboard.image)[2]}
-                alt={keyboard.title}
-              />
+              {JSON.parse(keyboard.image)[2] && (
+                <Image
+                  fill
+                  className=" "
+                  src={JSON.parse(keyboard.image)[2]}
+                  alt={keyboard.title}
+                />
+              )}
+            </div>
+          </div>
+          <div className="md:flex justify-center">
+            {" "}
+            <div className=" relative md:h-[800px] md:w-[800px] h-96 w-96 ">
+              {" "}
+              {JSON.parse(keyboard.image)[3] && (
+                <Image
+                  fill
+                  className=" "
+                  src={JSON.parse(keyboard.image)[3]}
+                  alt={keyboard.title}
+                />
+              )}
+            </div>
+            <div className=" relative md:h-[800px] md:w-[800px] h-96 w-96 ">
+              {" "}
+              {JSON.parse(keyboard.image)[4] && (
+                <Image
+                  fill
+                  className=""
+                  src={JSON.parse(keyboard.image)[4]}
+                  alt={keyboard.title}
+                />
+              )}
             </div>
           </div>
 
-          <div className=" relative h-[800px] w-[800px] ">
+          <div className="md:flex justify-center">
             {" "}
-            <Image
-              fill
-              className="rounded-3xl "
-              src={JSON.parse(keyboard.image)[3]}
-              alt={keyboard.title}
-            />
-          </div>
-          <div className=" relative h-[1200px]  w-full ">
-            {" "}
-            <Image
-              fill
-              className="rounded-3xl "
-              src={JSON.parse(keyboard.image)[4]}
-              alt={keyboard.title}
-            />
-          </div>
-          <div className=" relative h-[800px] w-[800px] ">
-            {" "}
-            <Image
-              fill
-              className="rounded-3xl "
-              src={JSON.parse(keyboard.image)[5]}
-              alt={keyboard.title}
-            />
+            <div className=" relative md:h-[800px] md:w-[800px] h-96 w-96 ">
+              {" "}
+              {JSON.parse(keyboard.image)[5] && (
+                <Image
+                  fill
+                  className=" "
+                  src={JSON.parse(keyboard.image)[5]}
+                  alt={keyboard.title}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>

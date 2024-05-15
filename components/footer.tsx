@@ -1,4 +1,5 @@
 import CircleText from "./circleText";
+import Link from "next/link";
 export default function Footer() {
   return (
     <div className="bg-neutral-700 bg-cover  font-Cairo">
@@ -17,7 +18,7 @@ export default function Footer() {
           </div>
           <div className="leading-loose	cursor-pointer">
             <h1>Menu</h1>
-            <h2>Home</h2>
+            <h2><Link href="/">Home</Link></h2>
             <h2>Keyboards</h2>
             <h2>Accessories</h2>
             <h2>About</h2>
