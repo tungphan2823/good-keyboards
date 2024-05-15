@@ -54,6 +54,9 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
+  const goToSlide = (slideIndex: number) => {
+    setCurrentIndex(slideIndex);
+  };
   return (
     <div className="p-8 ">
       <div className="object-cover h-full flex-1 flex justify-center pb-20 border-b-2 border-gray">
@@ -79,8 +82,8 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
             <div className=" absolute text-stone-800 flex bottom-5  ">
               {JSON.parse(keyboard.image).map(
                 (slide: string, slideIndex: number) => (
-                  <div>
-                    <FiberManualRecordIcon className="text-sm md:text-2xl" />
+                  <div onClick={() => goToSlide(slideIndex)}>
+                    <FiberManualRecordIcon className="text-sm md:text-2xl cursor-pointer" />
                   </div>
                 )
               )}
