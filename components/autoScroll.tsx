@@ -9,6 +9,7 @@ import akko from "../public/company/akko.png";
 import divini from "../public/company/divini.png";
 import logitech from "../public/company/logitech.png";
 import RK from "../public/company/RK.png";
+import nuphy from "../public/company/nuphy.png";
 export default function AutoScrolling({ scrollType }: ScrollingProps) {
   return (
     <div className="">
@@ -40,6 +41,9 @@ export default function AutoScrolling({ scrollType }: ScrollingProps) {
             </div>
             <div className=" m-1 rounded-xl flex space-x-5 p-16  font-bold text-xs cursor-pointer items-center gap-1 max-w-48">
               <Image src={RK} alt="css"></Image>
+            </div>
+            <div className=" m-1 rounded-xl flex space-x-5 p-16  font-bold text-xs cursor-pointer items-center gap-1 max-w-48">
+              <Image src={nuphy} alt="css"></Image>
             </div>
           </Marquee>
         </>

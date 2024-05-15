@@ -6,6 +6,8 @@ import NavBar from "@/components/navBar";
 import AutoScrolling from "@/components/autoScroll";
 import kb81 from "../public/keyboard/kb81.jpg";
 import { KeyboardItems } from "@/components/keyboardItems";
+import nuphy from "../public/company/nuphy.png";
+import epo from "../public/company/epo.png";
 export default function Home() {
   return (
     <main>
@@ -40,6 +42,26 @@ export default function Home() {
           Top recommended keyboards
         </h1>
         <KeyboardItems />
+      </div>
+      <div className="p-8">
+        <h1 className="font-Freeman text-2xl text-black">
+          Explore all keyboards by their brand
+        </h1>
+        <div className="flex justify-center">
+          <div className="text-black font-Freeman md:grid md:grid-cols-4 ">
+            <div className="p-4">
+              <div className="flex md:w-96 md:h-64 w-64 h-32 justify-center items-center p-8 gap-4 cursor-pointer bg-imageWhite rounded-2xl hover:border-2 hover:border-black transition-all">
+                <Image src={nuphy} alt="" />
+              </div>
+            </div>
+            <div className="p-4">
+              {" "}
+              <div className="flex md:w-96 md:h-64 w-64 h-32 justify-center items-center p-8 gap-4 cursor-pointer bg-imageWhite rounded-2xl hover:border-2 hover:border-black transition-all">
+                <Image src={epo} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );
