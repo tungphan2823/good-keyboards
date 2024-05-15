@@ -11,13 +11,9 @@ export default function Home() {
     <main>
       {" "}
       {/* <NavBar /> */}
-      <div
-        className="flex flex-1  gap-4 border-b-2 border-black
-
-"
-      >
+      <div className="flex flex-1  gap-4 border-b-2 border-black">
         {" "}
-        <div className="border-r-2 border-black w-1/2 h-[90vh] content-end grid font-Freeman text-black">
+        <div className="md:border-r-2 border-black w-1/2 h-[90vh] content-end grid font-Freeman text-black">
           <div className="  p-8  text-4xl">
             <div>Good Switch * </div>
             <h1>— find your next </h1>
@@ -28,7 +24,7 @@ export default function Home() {
             interesting company in the world.
           </div>
         </div>
-        <div className="w-1/2 text-black flex justify-center  items-end  font-Freeman p-8 text-2xl">
+        <div className=" hidden w-1/2 text-black md:flex justify-center  items-end  font-Freeman p-8 text-2xl">
           <Image src={keyboard1} alt="" />
           <div>
             Most recommended keyboards <SouthIcon className="animate-bounce" />

@@ -6,12 +6,12 @@ export async function KeyboardItems() {
   console.log(keyboards);
 
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="md:grid md:grid-cols-4 md:gap-4 overflow-x-scroll  md:overflow-x-hidden flex border-b-2 border-gray-50">
       {keyboards.map((keyboard, index) => (
-        <div className="p-8 w-96 object-cover " key={index}>
+        <div className="p-8   object-cover flex-initial " key={index}>
           <Link href={`/keyboards/${keyboard.slug}`}>
             <div className="">
-              <div className=" relative h-80 ">
+              <div className=" relative h-40 w-40 md:w-96 md:h-96">
                 {" "}
                 <Image
                   fill

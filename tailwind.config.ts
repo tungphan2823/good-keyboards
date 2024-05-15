@@ -29,13 +29,13 @@ const config: Config = {
         blackGray: "#0E100F",
         foggy: "#566162",
         watermelon: "#05AF94",
-        imageWhite: "#F6F6F6"
+        imageWhite: "#F6F6F6",
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",
       },
     },
   },
-  plugins: [],
+  plugins: [require("./plugins/openVariant")],
 };
 export default config;
