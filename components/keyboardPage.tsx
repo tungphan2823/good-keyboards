@@ -29,18 +29,18 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
       gsap.to(imageElement, {
         scrollTrigger: {
           trigger: textElement,
-          start: "top 15%", 
-          end: "bottom 95%", 
+          start: "top 15%",
+          end: "bottom 95%",
           pin: imageElement,
-          pinSpacing: false, 
-          markers: true,
+          pinSpacing: false,
+          //   markers: true,
         },
       });
     }
   });
   return (
     <div className="p-8 ">
-      <div className="object-cover h-full flex-1 flex justify-center  ">
+      <div className="object-cover h-full flex-1 flex justify-center pb-20 border-b-2 border-gray">
         <div className="flex gap-12">
           <div ref={imageRef} className=" relative h-[800px] w-[800px]">
             {" "}
@@ -91,9 +91,58 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
           </div>
         </div>
       </div>
-      {Array.from({ length: 50 }, (_, index) => (
-        <div key={index}>Hello</div>
-      ))}
+      <div>
+        <div className="p-8">
+          <div className="flex justify-center">
+            <div className=" relative h-[800px] w-[800px] ">
+              {" "}
+              <Image
+                fill
+                className=" "
+                src={JSON.parse(keyboard.image)[1]}
+                alt={keyboard.title}
+              />
+            </div>
+            <div className=" relative h-[800px] w-[800px] ">
+              {" "}
+              <Image
+                fill
+                className=" "
+                src={JSON.parse(keyboard.image)[2]}
+                alt={keyboard.title}
+              />
+            </div>
+          </div>
+
+          <div className=" relative h-[800px] w-[800px] ">
+            {" "}
+            <Image
+              fill
+              className="rounded-3xl "
+              src={JSON.parse(keyboard.image)[3]}
+              alt={keyboard.title}
+            />
+          </div>
+          <div className=" relative h-[1200px]  w-full ">
+            {" "}
+            <Image
+              fill
+              className="rounded-3xl "
+              src={JSON.parse(keyboard.image)[4]}
+              alt={keyboard.title}
+            />
+          </div>
+          <div className=" relative h-[800px] w-[800px] ">
+            {" "}
+            <Image
+              fill
+              className="rounded-3xl "
+              src={JSON.parse(keyboard.image)[5]}
+              alt={keyboard.title}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
