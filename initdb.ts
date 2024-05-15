@@ -226,7 +226,7 @@ Instruction Manual
       SCREEN RESOLUTION
       240(H)RGB x 240(V) Pixels
     `,
-    brand: "Epomarker",
+    brand: "Epomaker",
     dimensions: `
     350mm x 114mm x 45mm
     `,

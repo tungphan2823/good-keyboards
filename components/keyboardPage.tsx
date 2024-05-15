@@ -71,7 +71,7 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
 
             <Image
               fill
-              className="rounded-3xl duration-500"
+              className="rounded-3xl "
               src={JSON.parse(keyboard.image)[currentIndex]}
               alt={keyboard.title}
             />

@@ -23,7 +23,9 @@ export default function NavBar() {
         </div>
         <div className="absolute top-[100px] bg-zinc-900 w-full left-0 peer-open:block hidden">
           <div className="relative flex justify-center h-full cursor-pointer items-center p-4 font font-Cairo text-white hover:bg-zinc-800">
-            <span><Link href="/">Home</Link></span>
+            <span>
+              <Link href="/">Home</Link>
+            </span>
           </div>
           <div className="relative flex justify-center h-full cursor-pointer items-center p-4 font font-Cairo text-white hover:bg-zinc-800">
             <span>Keyboards</span>
@@ -40,7 +42,9 @@ export default function NavBar() {
         <div>
           <Link href="/">Home</Link>
         </div>
-        <div>Keyboards</div>
+        <div>
+          <Link href="/keyboards">Keyboards</Link>
+        </div>
         <div>Accessories</div>
         <div>About</div>
       </div>
