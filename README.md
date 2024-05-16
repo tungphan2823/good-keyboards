@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+<a target="_blank" href="https://github.com/tungphan2823/good-keyboards" >
+    <img alt='Website' className="rounded-3xl shadow-xl" src="./public/readme/main.png" />
+    <img alt='Website' className="rounded-3xl shadow-xl" src="./public/readme/1.png" />
+    <img alt='Website' className="rounded-3xl shadow-xl" src="./public/readme/2.png" />
+    <img alt='Website' className="rounded-3xl shadow-xl" src="./public/readme/3.png" />
+    <img alt='Website' className="rounded-3xl shadow-xl" src="./public/readme/4.png" />
+</a>
 
-First, run the development server:
+[![Website](https://img.shields.io/badge/%20%F0%9F%8F%A1%20website-0072ff.svg?longCache=true&style=for-the-badge)](https://tungphan.id.vn/)
+[![Website](https://img.shields.io/badge/Deploy-brightgreen.svg?logo=vercel&longCache=true&style=for-the-badge)]()
+[![Vercel](https://img.shields.io/badge/-powered%20by%20vercel-black.svg?logo=vercel&longCache=true&style=for-the-badge)](https://vercel.com/home?utm_source=nuro&utm_campaign=oss)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+</div>
+
+## 🛠 Development
+
+Clone the repository
+
+```zsh
+git clone https://github.com/tungphan2823/good-keyboards
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```zsh
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Or using Yarn
 
-## Learn More
+yarn
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the development server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```zsh
+npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
