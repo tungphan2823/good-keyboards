@@ -91,7 +91,7 @@ export default function KeyboardFullItems({
                     <Image
                       fill
                       className="rounded-3xl "
-                      src={JSON.parse(keyboard.image)[0]}
+                      src={keyboard.image[0]}
                       alt={keyboard.title}
                     />
                   </div>
@@ -115,7 +115,7 @@ export default function KeyboardFullItems({
                     <Image
                       fill
                       className="rounded-3xl "
-                      src={JSON.parse(keyboard.image)[0]}
+                      src={keyboard.image[0]}
                       alt={keyboard.title}
                     />
                   </div>

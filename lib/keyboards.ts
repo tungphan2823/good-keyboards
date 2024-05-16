@@ -1,4 +1,5 @@
-import sql from "better-sqlite3";
+// import sql from "better-sqlite3";
+import { sql } from "@vercel/postgres";
 interface Keyboard {
   id: number;
   title: string;
@@ -13,12 +14,14 @@ interface Keyboard {
   material: string;
 }
 
-const db = sql("keyboards.db");
+// const db = sql("keyboards.db");
 
-export function getKeyboards() {
-  return db.prepare("SELECT * FROM keyboards").all() as Keyboard[];
+export async function getKeyboards() {
+  const { rows } = await sql`SELECT * FROM keyboards`;
+  return rows as Keyboard[];
 }
-export function getKeyboard(slug: string): Keyboard {
-  const stmt = db.prepare("SELECT * FROM keyboards WHERE slug =?");
-  return stmt.get(slug) as Keyboard;
+export async function getKeyboard(slug: string) {
+  const { rows } = await sql`SELECT * FROM keyboards WHERE slug = ${slug}`;
+  return rows[0] as Keyboard; 
 }
+

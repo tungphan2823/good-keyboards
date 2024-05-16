@@ -8,7 +8,7 @@ type keyboardType = {
 };
 export async function KeyboardItems({ fetchType }: keyboardType) {
   const keyboards = await getKeyboards();
-
+  
   return (
     <>
       {" "}
@@ -28,7 +28,7 @@ export async function KeyboardItems({ fetchType }: keyboardType) {
                     <Image
                       fill
                       className="rounded-3xl "
-                      src={JSON.parse(keyboard.image)[0]}
+                      src={keyboard.image[0]}
                       alt={keyboard.title}
                     />
                   </div>

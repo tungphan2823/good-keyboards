@@ -26,34 +26,35 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
   const textRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   useGSAP(() => {
     let mm = gsap.matchMedia();
     const textElement = textRef.current;
     const imageElement = imageRef.current;
     if (textElement && imageElement) {
-      mm.add("(min-width: 800px)", () => {gsap.to(imageElement, {
-        scrollTrigger: {
-          trigger: textElement,
-          start: "top 15%",
-          end: "bottom 95%",
-          pin: imageElement,
-          pinSpacing: false,
-          //   markers: true,
-        },
-      });})
-      
+      mm.add("(min-width: 800px)", () => {
+        gsap.to(imageElement, {
+          scrollTrigger: {
+            trigger: textElement,
+            start: "top 15%",
+            end: "bottom 95%",
+            pin: imageElement,
+            pinSpacing: false,
+            //   markers: true,
+          },
+        });
+      });
     }
   });
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide
-      ? JSON.parse(keyboard.image).length - 1
+      ? keyboard.image.length - 1
       : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
   const nextSlide = () => {
-    const isLastSlide = currentIndex === JSON.parse(keyboard.image).length - 1;
+    const isLastSlide = currentIndex === keyboard.image.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
@@ -75,7 +76,7 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
             <Image
               fill
               className="rounded-3xl "
-              src={JSON.parse(keyboard.image)[currentIndex]}
+              src={keyboard.image[currentIndex]}
               alt={keyboard.title}
             />
             <div onClick={nextSlide}>
@@ -83,13 +84,12 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
             </div>
 
             <div className=" absolute text-stone-800 flex bottom-5  ">
-              {JSON.parse(keyboard.image).map(
-                (slide: string, slideIndex: number) => (
+              {Array.isArray(keyboard.image) &&
+                keyboard.image.map((slide: string, slideIndex: number) => (
                   <div key={slideIndex} onClick={() => goToSlide(slideIndex)}>
                     <FiberManualRecordIcon className="text-sm lg:text-2xl cursor-pointer" />
                   </div>
-                )
-              )}
+                ))}
             </div>
           </div>
           <div ref={textRef} className=" text-black  leading-loose	w-96 left	">
@@ -141,17 +141,17 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
               <Image
                 fill
                 className=" "
-                src={JSON.parse(keyboard.image)[1]}
+                src={keyboard.image[1]}
                 alt={keyboard.title}
               />
             </div>
             <div className=" relative md:h-[800px] md:w-[800px] h-80 w-80 ">
               {" "}
-              {JSON.parse(keyboard.image)[2] && (
+              {keyboard.image[2] && (
                 <Image
                   fill
                   className=" "
-                  src={JSON.parse(keyboard.image)[2]}
+                  src={keyboard.image[2]}
                   alt={keyboard.title}
                 />
               )}
@@ -161,22 +161,22 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
             {" "}
             <div className=" relative md:h-[800px] md:w-[800px] h-80 w-80 ">
               {" "}
-              {JSON.parse(keyboard.image)[3] && (
+              {keyboard.image[3] && (
                 <Image
                   fill
                   className=" "
-                  src={JSON.parse(keyboard.image)[3]}
+                  src={keyboard.image[3]}
                   alt={keyboard.title}
                 />
               )}
             </div>
             <div className=" relative md:h-[800px] md:w-[800px] h-80 w-80 ">
               {" "}
-              {JSON.parse(keyboard.image)[4] && (
+              {keyboard.image[4] && (
                 <Image
                   fill
                   className=""
-                  src={JSON.parse(keyboard.image)[4]}
+                  src={keyboard.image[4]}
                   alt={keyboard.title}
                 />
               )}
@@ -187,11 +187,11 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
             {" "}
             <div className=" relative md:h-[800px] md:w-[800px] h-80 w-80 ">
               {" "}
-              {JSON.parse(keyboard.image)[5] && (
+              {keyboard.image[5] && (
                 <Image
                   fill
                   className=" "
-                  src={JSON.parse(keyboard.image)[5]}
+                  src={keyboard.image[5]}
                   alt={keyboard.title}
                 />
               )}

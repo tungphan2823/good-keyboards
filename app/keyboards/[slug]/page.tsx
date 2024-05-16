@@ -5,8 +5,8 @@ interface Params {
   slug: string;
 }
 
-export default function KeyboardPostPage({ params }: { params: Params }) {
-  const keyboard = getKeyboard(params.slug);
+export default async function KeyboardPostPage({ params }: { params: Params }) {
+  const keyboard = await getKeyboard(params.slug);
   keyboard.specs = keyboard.specs.replace(/\n/g, "<br />");
   keyboard.dimensions = keyboard.dimensions.replace(/\n/g, "<br />");
   keyboard.material = keyboard.material.replace(/\n/g, "<br />");
