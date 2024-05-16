@@ -32,7 +32,7 @@ export default function KeyboardFullItems({
     if (queryParams) {
       setFilter(queryParams);
     }
-  }, []);
+  }, [searchParams]);
   return (
     <>
       <div>

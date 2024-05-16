@@ -85,7 +85,7 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
             <div className=" absolute text-stone-800 flex bottom-5  ">
               {JSON.parse(keyboard.image).map(
                 (slide: string, slideIndex: number) => (
-                  <div onClick={() => goToSlide(slideIndex)}>
+                  <div key={slideIndex} onClick={() => goToSlide(slideIndex)}>
                     <FiberManualRecordIcon className="text-sm lg:text-2xl cursor-pointer" />
                   </div>
                 )
