@@ -1,4 +1,4 @@
-// import { getKeyboard } from "@/lib/keyboards";
+
 import { getKeyboards } from "@/lib/keyboards";
 import KeyboardPage from "@/components/keyboardPage";
 import Image from "next/image";
@@ -7,7 +7,7 @@ interface Params {
 }
 
 export default function KeyboardPostPage({ params }: { params: Params }) {
-  // const keyboard = getKeyboard(params.slug);
+  
   const keyboards = getKeyboards();
   const filteredKeyboards = keyboards.filter(
     (keyboard) => keyboard.slug === params.slug
