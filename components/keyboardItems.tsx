@@ -1,6 +1,7 @@
 import { getKeyboards } from "@/lib/keyboards";
 import Image from "next/image";
 import Link from "next/link";
+import Warpper from "./warpper";
 import KeyboardFullItems from "./keyboardFullItems";
 type keyboardType = {
   fetchType: string;
@@ -13,7 +14,7 @@ export async function KeyboardItems({ fetchType }: keyboardType) {
       {" "}
       {fetchType === "full" && (
         <div className="">
-          <KeyboardFullItems keyboard={keyboards} />
+          <Warpper keyboard={keyboards} />
         </div>
       )}
       {fetchType === "limit" && (

@@ -1,6 +1,5 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -35,7 +34,7 @@ export default function KeyboardFullItems({
     }
   }, [searchParams]);
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
       <div>
         <h1 className="font-Freeman text-2xl lg:text-4xl text-black p-10">
           All recommended keyboards
@@ -131,6 +130,6 @@ export default function KeyboardFullItems({
             </div>
           ))}
       </div>
-    </Suspense>
+    </>
   );
 }
