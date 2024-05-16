@@ -28,27 +28,34 @@ export default function NavBar() {
             </span>
           </div>
           <div className="relative flex justify-center h-full cursor-pointer items-center p-4 font font-Cairo text-white hover:bg-zinc-800">
-            <span><Link href="/keyboards">Keyboards</Link></span>
+            <span>
+              <Link href="/keyboards">Keyboards</Link>
+            </span>
           </div>
+
           <div className="relative flex justify-center h-full cursor-pointer items-center p-4 font font-Cairo text-white hover:bg-zinc-800">
-            <span>Accessories</span>
-          </div>
-          <div className="relative flex justify-center h-full cursor-pointer items-center p-4 font font-Cairo text-white hover:bg-zinc-800">
-            <span>About</span>
+            <span>
+              <Link href="/about">About</Link>
+            </span>
           </div>
         </div>
       </div>
-      <div className="md:flex hidden gap-8 text-xl cursor-pointer">
+      <div className="md:flex hidden gap-12 text-2xl cursor-pointer pl-4">
         <div>
           <Link href="/">Home</Link>
         </div>
         <div>
           <Link href="/keyboards">Keyboards</Link>
         </div>
-        <div>Accessories</div>
-        <div>About</div>
+
+        <div>
+          <Link href="/about">About</Link>
+        </div>
       </div>
-      <div className="flex justify-end flex-1 text-3xl">GoodSwitch * </div>
+      <div className="flex justify-end flex-1 text-3xl">
+        {" "}
+        <Link href="/">GoodSwitch *</Link>
+      </div>
     </div>
   );
 }

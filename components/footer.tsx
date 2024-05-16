@@ -19,9 +19,9 @@ export default function Footer() {
           <div className="leading-loose	cursor-pointer">
             <h1>Menu</h1>
             <h2><Link href="/">Home</Link></h2>
-            <h2>Keyboards</h2>
-            <h2>Accessories</h2>
-            <h2>About</h2>
+            <h2><Link href="/keyboards">Keyboards</Link></h2>
+            
+            <h2><Link href="/about">About</Link></h2>
           </div>
         </div>
       </div>
