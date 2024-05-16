@@ -18,7 +18,7 @@ export default function Home() {
       {/* <NavBar /> */}
       <div className="flex flex-1  gap-4 border-b-2 border-black">
         {" "}
-        <div className="md:border-r-2 border-black w-1/2 h-[90vh] content-end grid font-Freeman text-black">
+        <div className="lg:border-r-2 border-black w-1/2 h-[90vh] content-end grid font-Freeman text-black">
           <div className="  p-8  text-4xl">
             <div>Good Switch * </div>
             <h1>— find your next </h1>
@@ -29,7 +29,7 @@ export default function Home() {
             interesting company in the world.
           </div>
         </div>
-        <div className=" hidden w-1/2 text-black md:flex justify-center  items-end  font-Freeman p-8 text-2xl">
+        <div className=" hidden w-1/2 text-black lg:flex justify-center  items-end  font-Freeman p-8 text-2xl">
           <Image src={keyboard1} alt="" />
           <div>
             Most recommended keyboards <SouthIcon className="animate-bounce" />
@@ -51,9 +51,9 @@ export default function Home() {
           Explore their brand
         </h1>
         <div className="flex justify-center">
-          <div className="text-black font-Freeman md:grid md:grid-cols-4 ">
+          <div className="text-black font-Freeman lg:grid lg:grid-cols-4 ">
             <div className="p-4">
-              <div className="flex md:w-96 md:h-64 w-64 h-32 justify-center items-center p-8 gap-4 cursor-pointer bg-imageWhite rounded-2xl hover:border-2 hover:border-black transition-all">
+              <div className="flex lg:w-96 lg:h-64 w-64 h-32 justify-center items-center p-8 gap-4 cursor-pointer bg-imageWhite rounded-2xl hover:border-2 hover:border-black transition-all">
                 <Link href="/keyboards?filter=NuPhy">
                   <Image src={nuphy} alt="nuphy" />
                 </Link>
@@ -61,7 +61,7 @@ export default function Home() {
             </div>
             <div className="p-4">
               {" "}
-              <div className="flex md:w-96 md:h-64 w-64 h-32 justify-center items-center p-8 gap-4 cursor-pointer bg-imageWhite rounded-2xl hover:border-2 hover:border-black transition-all">
+              <div className="flex lg:w-96 lg:h-64 w-64 h-32 justify-center items-center p-8 gap-4 cursor-pointer bg-imageWhite rounded-2xl hover:border-2 hover:border-black transition-all">
                 <Link href="/keyboards?filter=Epomaker">
                   <Image src={epo} alt="epo" />
                 </Link>
@@ -69,7 +69,7 @@ export default function Home() {
             </div>
             <div className="p-4">
               {" "}
-              <div className="flex md:w-96 md:h-64 w-64 h-32 justify-center items-center p-8 gap-4 cursor-pointer bg-imageWhite rounded-2xl hover:border-2 hover:border-black transition-all">
+              <div className="flex lg:w-96 lg:h-64 w-64 h-32 justify-center items-center p-8 gap-4 cursor-pointer bg-imageWhite rounded-2xl hover:border-2 hover:border-black transition-all">
                 <Link href="/keyboards?filter=akko">
                   <Image src={akko} alt="akko" />
                 </Link>
@@ -77,7 +77,7 @@ export default function Home() {
             </div>
             <div className="p-4">
               {" "}
-              <div className="flex md:w-96 md:h-64 w-64 h-32 justify-center items-center p-8 gap-4 cursor-pointer bg-imageWhite rounded-2xl hover:border-2 hover:border-black transition-all">
+              <div className="flex lg:w-96 lg:h-64 w-64 h-32 justify-center items-center p-8 gap-4 cursor-pointer bg-imageWhite rounded-2xl hover:border-2 hover:border-black transition-all">
                 <Link href="/keyboards?filter=keychron">
                   {" "}
                   <Image src={keychron} alt="keychron" />

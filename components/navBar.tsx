@@ -10,7 +10,7 @@ export default function NavBar() {
 
   return (
     <div className="flex  items-center  p-8  text-black  top-0  sticky font-Cairo border-b-2 border-slate-800 backdrop-blur-lg z-10">
-      <div className="block md:hidden ml-auto pl-4 my-auto cursor-pointer">
+      <div className="block lg:hidden ml-auto pl-4 my-auto cursor-pointer">
         <div
           className={isOpen ? "group peer open" : "group peer"}
           id="mobile-menu-button "
@@ -40,7 +40,7 @@ export default function NavBar() {
           </div>
         </div>
       </div>
-      <div className="md:flex hidden gap-12 text-2xl cursor-pointer pl-4">
+      <div className="lg:flex hidden gap-12 text-2xl cursor-pointer pl-4">
         <div>
           <Link href="/">Home</Link>
         </div>

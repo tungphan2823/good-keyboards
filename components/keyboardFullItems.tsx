@@ -36,13 +36,13 @@ export default function KeyboardFullItems({
   return (
     <>
       <div>
-        <h1 className="font-Freeman text-2xl md:text-4xl text-black p-10">
+        <h1 className="font-Freeman text-2xl lg:text-4xl text-black p-10">
           All recommended keyboards
         </h1>
 
         <label className="p-10 text-black font-Freeman">Brand</label>
         <p className="p-10 text-black font-Freeman">Choose filter</p>
-        <div className="flex text-black gap-4 p-10 overflow-x-scroll md:overflow-x-hidden">
+        <div className="flex text-black gap-4 p-10 overflow-x-scroll lg:overflow-x-hidden">
           <div
             className="p-4 bg-slate-50 rounded-full cursor-pointer hover:border-2 hover:border-black "
             onClick={() => {
@@ -80,13 +80,13 @@ export default function KeyboardFullItems({
           </div>
         </div>
       </div>
-      <div className=" md:grid md:grid-cols-4 md:overflow-x-hidden   border-b-2 border-gray-50">
+      <div className=" lg:grid lg:grid-cols-4 lg:overflow-x-hidden   border-b-2 border-gray-50">
         {!isFilter &&
           keyboard.map((keyboard, index) => (
             <div className="p-8   object-cover flex-initial " key={index}>
               <Link href={`/keyboards/${keyboard.slug}`}>
                 <div className="">
-                  <div className=" relative h-80 w-80 md:w-96 md:h-96">
+                  <div className=" relative h-80 w-80 lg:w-96 lg:h-96">
                     {" "}
                     <Image
                       fill
@@ -110,7 +110,7 @@ export default function KeyboardFullItems({
             <div className="p-8   object-cover flex-initial " key={index}>
               <Link href={`/keyboards/${keyboard.slug}`}>
                 <div className="">
-                  <div className=" relative h-80 w-80 md:w-96 md:h-96">
+                  <div className=" relative h-80 w-80 lg:w-96 lg:h-96">
                     {" "}
                     <Image
                       fill

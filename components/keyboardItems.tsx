@@ -17,12 +17,12 @@ export async function KeyboardItems({ fetchType }: keyboardType) {
         </div>
       )}
       {fetchType === "limit" && (
-        <div className="md:grid md:grid-cols-4 md:gap-4 overflow-x-scroll  md:overflow-x-hidden flex border-b-2 border-gray-50">
+        <div className="lg:grid lg:grid-cols-4 lg:gap-4 overflow-x-scroll  lg:overflow-x-hidden flex border-b-2 border-gray-50">
           {keyboards.slice(0, 8).map((keyboard, index) => (
             <div className="p-8   object-cover flex-initial " key={index}>
               <Link href={`/keyboards/${keyboard.slug}`}>
                 <div className="">
-                  <div className=" relative h-40 w-40 md:w-96 md:h-96">
+                  <div className=" relative h-40 w-40 lg:w-96 lg:h-96">
                     {" "}
                     <Image
                       fill

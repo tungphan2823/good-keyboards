@@ -26,11 +26,13 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
   const textRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  
   useGSAP(() => {
+    let mm = gsap.matchMedia();
     const textElement = textRef.current;
     const imageElement = imageRef.current;
     if (textElement && imageElement) {
-      gsap.to(imageElement, {
+      mm.add("(min-width: 800px)", () => {gsap.to(imageElement, {
         scrollTrigger: {
           trigger: textElement,
           start: "top 15%",
@@ -39,7 +41,8 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
           pinSpacing: false,
           //   markers: true,
         },
-      });
+      });})
+      
     }
   });
   const prevSlide = () => {
@@ -60,10 +63,10 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
   return (
     <div className="p-8 ">
       <div className="object-cover h-full flex-1 flex justify-center pb-20 border-b-2 border-gray">
-        <div className="md:flex md:gap-12">
+        <div className="lg:flex lg:gap-12">
           <div
             ref={imageRef}
-            className=" relative md:h-[800px] md:w-[800px] h-96 w-96 text-black flex justify-center items-center"
+            className=" relative lg:h-[800px] lg:w-[800px] h-96 w-96 text-black flex justify-center items-center"
           >
             <div onClick={prevSlide}>
               <ArrowBackIosIcon className="absolute z-10 top-1/2 left-3 cursor-pointer text-stone-800 text-4xl" />{" "}
@@ -83,7 +86,7 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
               {JSON.parse(keyboard.image).map(
                 (slide: string, slideIndex: number) => (
                   <div onClick={() => goToSlide(slideIndex)}>
-                    <FiberManualRecordIcon className="text-sm md:text-2xl cursor-pointer" />
+                    <FiberManualRecordIcon className="text-sm lg:text-2xl cursor-pointer" />
                   </div>
                 )
               )}
@@ -131,9 +134,9 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
         </div>
       </div>
       <div>
-        <div className="md:p-8 ">
+        <div className="">
           <div className="md:flex justify-center">
-            <div className=" relative md:h-[800px] md:w-[800px] h-96 w-96">
+            <div className=" relative md:h-[800px] md:w-[800px] h-80 w-80">
               {" "}
               <Image
                 fill
@@ -142,7 +145,7 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
                 alt={keyboard.title}
               />
             </div>
-            <div className=" relative md:h-[800px] md:w-[800px] h-96 w-96 ">
+            <div className=" relative md:h-[800px] md:w-[800px] h-80 w-80 ">
               {" "}
               {JSON.parse(keyboard.image)[2] && (
                 <Image
@@ -156,7 +159,7 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
           </div>
           <div className="md:flex justify-center">
             {" "}
-            <div className=" relative md:h-[800px] md:w-[800px] h-96 w-96 ">
+            <div className=" relative md:h-[800px] md:w-[800px] h-80 w-80 ">
               {" "}
               {JSON.parse(keyboard.image)[3] && (
                 <Image
@@ -167,7 +170,7 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
                 />
               )}
             </div>
-            <div className=" relative md:h-[800px] md:w-[800px] h-96 w-96 ">
+            <div className=" relative md:h-[800px] md:w-[800px] h-80 w-80 ">
               {" "}
               {JSON.parse(keyboard.image)[4] && (
                 <Image
@@ -182,7 +185,7 @@ export default function KeyboardPage({ keyboard }: { keyboard: keyboardType }) {
 
           <div className="md:flex justify-center">
             {" "}
-            <div className=" relative md:h-[800px] md:w-[800px] h-96 w-96 ">
+            <div className=" relative md:h-[800px] md:w-[800px] h-80 w-80 ">
               {" "}
               {JSON.parse(keyboard.image)[5] && (
                 <Image

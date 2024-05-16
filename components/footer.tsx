@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="bg-neutral-700 bg-cover  font-Cairo">
-      <div className="md:flex ">
+      <div className="lg:flex ">
         <div>
           <div className=" text-5xl p-16">GoodSwitch* </div>
           <div className="p-12">
@@ -11,7 +11,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-1 md:justify-end w-20 md:text-2xl text-lg gap-4 p-16">
+        <div className="flex flex-1 lg:justify-end w-20 lg:text-2xl text-lg gap-4 p-12">
           <div className="leading-loose	cursor-pointer">
             <h1>Contact Me</h1>
             <h2>tungphann.work@gmail.com</h2>
