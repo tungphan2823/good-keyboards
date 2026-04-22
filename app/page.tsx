@@ -11,7 +11,6 @@ import nuphy from "../public/company/nuphy.png";
 import epo from "../public/company/epo.png";
 import akko from "../public/company/akko.png";
 import keychron from "../public/company//keychron.png";
-import funnyClip from "../public/mov_bbb.mp4";
 
 export default function Home() {
   return (
@@ -95,7 +94,7 @@ export default function Home() {
         </h1>
 
         <video controls className="w-full">
-          <source src={funnyClip} type="video/mp4" />
+          <source src="/mov_bbb.mp4" type="video/mp4" />
         </video>
       </div>
     </main>
