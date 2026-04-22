@@ -90,7 +90,7 @@ export default function Home() {
       </div>
       <div className="p-8 border-t-2 border-black">
         <h1 className="font-Freeman text-2xl text-black mb-4">
-          Dummy video for testing the video component, please ignore it.
+          Fat rabbit
         </h1>
 
         <video controls className="w-full">
