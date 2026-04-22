@@ -11,6 +11,8 @@ import nuphy from "../public/company/nuphy.png";
 import epo from "../public/company/epo.png";
 import akko from "../public/company/akko.png";
 import keychron from "../public/company//keychron.png";
+import funnyClip from "../public/mov_bbb.mp4";
+
 export default function Home() {
   return (
     <main>
@@ -86,6 +88,15 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="p-8 border-t-2 border-black">
+        <h1 className="font-Freeman text-2xl text-black mb-4">
+          Dummy video for testing the video component, please ignore it.
+        </h1>
+
+        <video controls className="w-full">
+          <source src={funnyClip} type="video/mp4" />
+        </video>
       </div>
     </main>
   );
