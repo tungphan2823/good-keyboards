@@ -89,13 +89,39 @@ export default function Home() {
         </div>
       </div>
       <div className="p-8 border-t-2 border-black">
-        <h1 className="font-Freeman text-2xl text-black mb-4">
-          Fat rabbit
-        </h1>
+        <h1 className="font-Freeman text-2xl text-black mb-4">Fat rabbit</h1>
 
-        <video controls className="w-full">
+        <video controls className="w-full rounded-2xl border-2 border-black">
           <source src="/mov_bbb.mp4" type="video/mp4" />
         </video>
+      </div>
+      <div className="p-8 border-t-2 border-black text-black">
+        <h1 className="font-Freeman text-2xl mb-4">Documents</h1>
+
+        <div className="flex gap-4 flex-wrap mb-6">
+          <a
+            href="/sample.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 border-2 border-black rounded-xl hover:bg-black hover:text-white transition-all"
+          >
+            Open PDF
+          </a>
+
+          <a
+            href="/sample1.doc"
+            download
+            className="px-4 py-2 border-2 border-black rounded-xl hover:bg-black hover:text-white transition-all"
+          >
+            Download DOCX
+          </a>
+        </div>
+
+        <iframe
+          src="/sample.pdf"
+          className="w-full h-[700px] border-2 border-black rounded-2xl"
+          title="PDF Preview"
+        />
       </div>
     </main>
   );
